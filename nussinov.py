@@ -56,7 +56,7 @@ class Nussinov:
         else:
             unpaired = self.findOptimal(i, j-1, sequence)
             possiblePairs = []
-            for t in range(i, j-4):
+            for t in range(i, j-m):
                 if self.isPair((sequence[t], sequence[j])):
                     possiblePairs.append(1 + self.findOptimal(i, t-1, sequence) + self.findOptimal(t+1, j-1, sequence))
             if not possiblePairs: 
